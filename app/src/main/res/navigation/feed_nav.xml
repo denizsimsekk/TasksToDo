@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/feed_nav"
+    app:startDestination="@id/managerFeedFragment">
+
+    <fragment
+        android:id="@+id/addUserFragment"
+        android:name="com.denizsimsek.taskstodo.view.head.AddUserFragment"
+        android:label="fragment_add_user"
+        tools:layout="@layout/fragment_add_user" />
+    <fragment
+        android:id="@+id/managerFeedFragment"
+        android:name="com.denizsimsek.taskstodo.view.head.HeadFeedFragment"
+        android:label="fragment_manager_feed"
+        tools:layout="@layout/fragment_head_feed" >
+        <action
+            android:id="@+id/action_managerFeedFragment_to_addUserFragment"
+            app:destination="@id/addUserFragment" />
+    </fragment>
+</navigation>
