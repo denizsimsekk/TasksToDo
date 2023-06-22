@@ -35,22 +35,8 @@ class LogInViewModel @Inject constructor(private val context: Context, private v
                         userRole.postValue(repo.checkRole(email))
                     }
                     job3.await()
-                    println("userRole: "+userRole.value.toString())
-                    if(userRole.value=="1")
-                    {
-                        val intent = Intent(context,HeadFeedActivity::class.java).apply {
-                            // set data as extra to intent
-                        }
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        context.startActivity(intent)
-                    }else
-                    {
-                        val intent = Intent(context,MemberFeedActivity::class.java).apply {
-                            // set data as extra to intent
-                        }
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        context.startActivity(intent)
-                    }
+
+
 
                 }else
                 {
